@@ -607,6 +607,220 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
 }
 
 /* ------------------------------------------------------------
+   Цены
+   ------------------------------------------------------------ */
+.price-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--paper-0);
+  overflow: hidden;
+}
+
+.price-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 22px 24px 24px;
+}
+.price-row + .price-row { border-top: 1px solid var(--line); }
+
+.price-row-text { flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px; }
+.price-row-text p { margin: 0; font-size: 16px; line-height: 1.5; color: var(--ink-500); }
+
+.price-value {
+  margin: 0;
+  flex: none;
+  font-weight: 800;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.2;
+  color: var(--green-700);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------
+   Пять шагов работы
+   ------------------------------------------------------------ */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  gap: 26px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 26px;
+  border-top: 2px solid var(--green-100);
+}
+.step p { margin: 0; font-size: 16px; line-height: 1.5; color: var(--ink-700); }
+
+.step-num {
+  position: absolute;
+  top: -17px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green-500);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* ------------------------------------------------------------
+   Объекты и отзывы
+   ------------------------------------------------------------ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 16px;
+}
+
+.gallery-cell { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.gallery-cell > .img-placeholder,
+.gallery-cell > picture {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  background: var(--paper-2);
+}
+.gallery-cell img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-caption { font-size: var(--text-small); color: var(--ink-500); }
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 0;
+  padding: 26px 26px 28px;
+  background: var(--paper-0);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-card);
+}
+.review blockquote {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: 1.55;
+  color: var(--ink-700);
+}
+.review figcaption { display: flex; flex-direction: column; gap: 4px; }
+.review-name { font-weight: 700; color: var(--ink-900); }
+.review-meta { font-size: var(--text-small); color: var(--ink-500); }
+
+/* Карточка ждёт реального отзыва — видно и на странице, и в вёрстке */
+.review--empty {
+  background: var(--paper-1);
+  border-style: dashed;
+  border-color: var(--ink-300);
+  box-shadow: none;
+}
+.review--empty blockquote { color: var(--ink-500); }
+
+/* ------------------------------------------------------------
+   Договор и цифры производства
+   ------------------------------------------------------------ */
+.doc-card { display: flex; flex-direction: column; gap: 14px; }
+
+.doc-shot {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  background: var(--paper-2);
+}
+.doc-shot img { width: 100%; height: 100%; object-fit: cover; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: 20px 24px;
+  margin: 6px 0 0;
+}
+.stat { display: flex; flex-direction: column; gap: 6px; }
+.stat-value {
+  font-weight: 800;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  color: var(--green-700);
+  font-variant-numeric: tabular-nums;
+}
+.stat-label { margin: 0; font-size: var(--text-small); line-height: 1.4; color: var(--ink-500); }
+
+/* ------------------------------------------------------------
+   Футер
+   ------------------------------------------------------------ */
+.footer { padding: 72px 24px 40px; background: var(--graphite-800); color: var(--text-on-dark); }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 36px 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--graphite-600);
+}
+
+.footer-brand { display: flex; flex-direction: column; gap: 14px; }
+.footer-mark {
+  margin: 0;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+}
+.footer-text { margin: 0; font-size: 16px; line-height: 1.55; color: var(--ink-300); }
+
+.footer-col { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--text-on-dark);
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-link:hover { color: var(--green-400); text-decoration: underline; }
+.footer-link--phone { font-size: 20px; font-weight: 700; color: #FFFFFF; }
+
+.footer-col .btn { margin-top: 6px; }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 32px;
+  padding-top: 28px;
+}
+.footer-legal { margin: 0; font-size: var(--text-small); color: var(--ink-300); }
+.footer-bottom .footer-link { font-size: var(--text-small); color: var(--ink-300); }
+
+/* ------------------------------------------------------------
    «Что вы покупаете за эту разницу» + мозаика фото
    ------------------------------------------------------------ */
 .value-card {
@@ -926,6 +1140,18 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
 
   .lead-form { padding: 24px 18px 26px; gap: 16px; }
   .form-intro { gap: 14px; }
+
+  .price-row { padding: 18px 18px 20px; gap: 6px 16px; }
+  .steps { gap: 24px 16px; }
+  .gallery { gap: 12px; }
+  .reviews { margin-top: 28px; gap: 12px; }
+  .review { padding: 22px 18px 24px; }
+  .doc-shot { aspect-ratio: 4 / 3; }
+  .stats { gap: 18px; }
+
+  .footer { padding: 48px 18px 28px; }
+  .footer-grid { gap: 28px; padding-bottom: 28px; }
+  .footer-col .btn { width: 100%; }
 
   .img-placeholder { font-size: 14px; }
 }
