@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ремонт вентиляции в частном доме — вентшахты.рф</title>
-<meta name="description" content="Ремонт вентиляции в частном доме: устраняем обратную тягу, конденсат, наледь и протечки в месте выхода на кровлю. Инженерная диагностика, свои детали, гарантия по договору.">
+<meta name="description" content="Ремонт вентиляции в частном доме: устраняем обратную тягу, конденсат, наледь и протечки на кровле. Инженерная диагностика, свои детали, гарантия по договору.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
@@ -13,10 +13,7 @@
 <body>
 
 <!-- ============================================================
-     0. Первый экран
-     H1 — ключевая фраза «ремонт вентиляции». Подзаголовок:
-     называем симптомы, с которыми приходят, и подход —
-     найти причину и устранить, а не заглушить.
+     0. Первый экран — фото сразу, текст минимальный
      ============================================================ -->
 <section class="section hero">
   <div class="container hero-grid">
@@ -24,7 +21,7 @@
     <div class="hero-text">
       <span class="eyebrow-pill">Сергиев Посад и Московская область</span>
       <h1 class="h1">Ремонт вентиляции в частном доме</h1>
-      <p class="lead">Задувает котёл, не тянет вытяжка, конденсат и наледь на трубе, течёт в месте выхода на кровлю. Находим причину и устраняем — с инженерной диагностикой и гарантией на работы по договору.</p>
+      <p class="lead">Задувает котёл, конденсат и наледь, течёт кровля у трубы. Находим причину и устраняем — с гарантией по договору.</p>
 
       <div class="hero-actions">
         <a class="btn btn--primary" href="#zayavka">Вызвать на диагностику</a>
@@ -32,22 +29,26 @@
       </div>
 
       <ul class="hero-facts">
-        <li>Работаем с жестью с 1993 года</li>
-        <li>Своё производство деталей</li>
-        <li>Две бригады: инженеры и кровельщики</li>
+        <li>С жестью с 1993 года</li>
+        <li>Своё производство</li>
+        <li>Инженеры и кровельщики</li>
       </ul>
     </div>
 
     <div class="hero-media">
       <figure class="hero-shot hero-shot--ours">
-        <!-- TODO: фото узла после ремонта в assets/img/remont-after-*.jpg -->
-        <div class="img-placeholder" data-placeholder="Фото узла после ремонта"></div>
-        <figcaption class="shot-label shot-label--ours">После ремонта</figcaption>
+        <picture>
+          <source type="image/jpeg" srcset="assets/img/gas-ours-640.jpg 640w, assets/img/gas-ours-960.jpg 960w, assets/img/gas-ours-1440.jpg 1440w" sizes="(max-width: 900px) 100vw, 520px">
+          <img src="assets/img/gas-ours-960.jpg" width="1440" height="1080" fetchpriority="high" decoding="async" alt="Вентшахта по расчёту, с утеплением и дымником на кровле">
+        </picture>
+        <figcaption class="shot-label shot-label--ours">Как должно быть</figcaption>
       </figure>
       <figure class="hero-shot hero-shot--econom">
-        <!-- TODO: фото проблемного узла до ремонта в assets/img/remont-before-*.jpg -->
-        <div class="img-placeholder" data-placeholder="Фото до ремонта"></div>
-        <figcaption class="shot-label shot-label--econom">До ремонта</figcaption>
+        <picture>
+          <source type="image/jpeg" srcset="assets/img/gas-usual-640.jpg 640w, assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 900px) 40vw, 240px">
+          <img src="assets/img/gas-usual-640.jpg" width="1080" height="810" decoding="async" alt="Неутеплённая труба без расчёта — частая причина проблем">
+        </picture>
+        <figcaption class="shot-label shot-label--econom">Проблема</figcaption>
       </figure>
     </div>
 
@@ -56,63 +57,46 @@
 
 
 <!-- ============================================================
-     1. С чем к нам приходят
-     Симптом → причина → что делаем. Пишем, что делаем,
-     а не чего не умеет «времянка». Причины настоящие:
-     ветровой подпор, утепление, сечение, примыкание.
+     1. С чем к нам приходят — компактные карточки, одна строка
      ============================================================ -->
 <section class="section section--tint" id="simptomy">
   <div class="container">
 
     <header class="block-head block-head--narrow">
-      <span class="eyebrow-pill">Ремонт вентиляции</span>
-      <h2 class="h2">С чем к нам приходят и что за этим стоит</h2>
-      <p class="lead">Почти всегда за симптомом стоит инженерная причина: труба ниже зоны ветрового подпора, нет утепления, занижено сечение или негерметичное примыкание к кровле. Сначала находим причину, потом чиним — а не глушим последствие.</p>
+      <h2 class="h2">С чем к нам приходят</h2>
+      <p class="lead">За симптомом почти всегда стоит причина: высота, сечение, утепление или примыкание. Сначала находим её, потом чиним.</p>
     </header>
 
     <div class="symptoms">
-
       <article class="symptom">
-        <h3 class="h4">Задувает котёл, срабатывает датчик тяги</h3>
-        <p><span class="lbl">Причина.</span> Тягу опрокидывает: выход трубы попадает в зону ветрового подпора или занижено сечение — при боковом ветре воздух идёт обратно в котельную.</p>
-        <p><span class="lbl lbl--fix">Что делаем.</span> Считаем высоту и сечение под ваш котёл и дом, выводим выше зоны подпора — котёл перестаёт гаснуть от ветра.</p>
+        <h3 class="h4">Задувает котёл</h3>
+        <p>Тягу опрокидывает ветром. Выводим трубу выше зоны подпора.</p>
       </article>
-
       <article class="symptom">
-        <h3 class="h4">Конденсат, сырость и плесень у вытяжки</h3>
-        <p><span class="lbl">Причина.</span> Канал не утеплён: тёплый влажный воздух остывает о холодный металл, влага оседает внутри и на стенах.</p>
-        <p><span class="lbl lbl--fix">Что делаем.</span> Ставим двухконтурное утепление и отвод конденсата — стенки не остывают, тяга держится и в мороз.</p>
+        <h3 class="h4">Конденсат и плесень</h3>
+        <p>Канал не утеплён. Ставим двухконтурное утепление.</p>
       </article>
-
       <article class="symptom">
-        <h3 class="h4">Наледь и сосульки на трубе зимой</h3>
-        <p><span class="lbl">Причина.</span> Та же — нет утепления. Пар из вытяжки замерзает на срезе, наледь сужает канал и добивает тягу.</p>
-        <p><span class="lbl lbl--fix">Что делаем.</span> Утепляем канал и меняем оголовок так, чтобы конденсат отводился, а не намерзал на выходе.</p>
+        <h3 class="h4">Наледь на трубе</h3>
+        <p>Та же причина — нет утепления. Меняем оголовок, отводим конденсат.</p>
       </article>
-
       <article class="symptom">
-        <h3 class="h4">Не тянет вытяжка, стоит запах</h3>
-        <p><span class="lbl">Причина.</span> Мало высоты, заужено сечение или каналы сведены неправильно — тяги не хватает, воздух в доме застаивается.</p>
-        <p><span class="lbl lbl--fix">Что делаем.</span> Проверяем тягу, пересчитываем узел и приводим сечение и высоту к расчёту по конкретному дому.</p>
+        <h3 class="h4">Не тянет вытяжка</h3>
+        <p>Мало высоты или занижено сечение. Пересчитываем узел.</p>
       </article>
-
       <article class="symptom">
-        <h3 class="h4">Течёт кровля в месте выхода трубы</h3>
-        <p><span class="lbl">Причина.</span> Негерметичное примыкание: узел прошёл кровлю без нормального фартука и герметизации, вода идёт по трубе внутрь.</p>
-        <p><span class="lbl lbl--fix">Что делаем.</span> Переделываем примыкание по своей технологии — кровельные работы наша компетенция, на стык даём гарантию 2 года по договору.</p>
+        <h3 class="h4">Течёт кровля у трубы</h3>
+        <p>Негерметичное примыкание. Переделываем стык, гарантия 2 года.</p>
       </article>
-
       <article class="symptom">
-        <h3 class="h4">Самодельная вентиляция от прежних строителей</h3>
-        <p><span class="lbl">Причина.</span> Узел собран «на глаз»: без расчёта, без утепления, примыкание кустарное. Работает до первой сильной зимы или ветра.</p>
-        <p><span class="lbl lbl--fix">Что делаем.</span> Проводим диагностику и приводим узел в порядок. Если он неремонтопригоден — честно скажем и посчитаем новый.</p>
+        <h3 class="h4">Самодельный узел</h3>
+        <p>Собран на глаз. Диагностируем и приводим в порядок.</p>
       </article>
-
     </div>
 
     <div class="cta-bar">
-      <p class="cta-bar-text">Не уверены, в чём причина? Приедем, проверим тягу и узел и скажем, что именно происходит и как это чинится.</p>
-      <a class="btn btn--primary" href="#zayavka">Записаться на диагностику</a>
+      <p class="cta-bar-text">Не уверены, в чём причина? Приедем, проверим тягу и скажем, что чинить.</p>
+      <a class="btn btn--primary" href="#zayavka">На диагностику</a>
     </div>
 
   </div>
@@ -120,41 +104,97 @@
 
 
 <!-- ============================================================
-     2. Как проходит ремонт — шаги
+     2. Видео — как работаем
+     Ссылки на ролики кладём в data-video-url каждой карточки.
+     Пусто → карточка статичная (превью-заглушка). Как появятся
+     ссылки (YouTube / VK / Rutube в embed-виде) — впишем сюда.
+     ============================================================ -->
+<section class="section section--dark" id="video">
+  <div class="container video-wrap">
+
+    <header class="video-head">
+      <div class="block-head video-head-main">
+        <p class="caption caption--on-dark">Видео с объектов</p>
+        <h2 class="h2 h2--on-dark">Как мы находим причину и чиним</h2>
+      </div>
+      <p class="hand hand--on-dark">Реальная работа, без монтажа под музыку</p>
+    </header>
+
+    <div class="video-grid">
+
+      <article class="video-card" data-video data-video-url="">
+        <div class="video-media">
+          <!-- TODO: превью в assets/img/remont-video-1.jpg + ссылка в data-video-url -->
+          <div class="img-placeholder img-placeholder--dark" data-placeholder="Видео: проверка тяги на объекте"></div>
+          <span class="video-play" aria-hidden="true"><span class="video-play-tri"></span></span>
+        </div>
+        <div class="video-body">
+          <h3 class="h4 h4--on-dark">Диагностика: как проверяем тягу</h3>
+        </div>
+      </article>
+
+      <article class="video-card" data-video data-video-url="">
+        <div class="video-media">
+          <!-- TODO: превью в assets/img/remont-video-2.jpg + ссылка в data-video-url -->
+          <div class="img-placeholder img-placeholder--dark" data-placeholder="Видео: ремонт примыкания к кровле"></div>
+          <span class="video-play" aria-hidden="true"><span class="video-play-tri"></span></span>
+        </div>
+        <div class="video-body">
+          <h3 class="h4 h4--on-dark">Переделка примыкания на кровле</h3>
+        </div>
+      </article>
+
+      <article class="video-card" data-video data-video-url="">
+        <div class="video-media">
+          <!-- TODO: превью в assets/img/remont-video-3.jpg + ссылка в data-video-url -->
+          <div class="img-placeholder img-placeholder--dark" data-placeholder="Видео: узел до и после"></div>
+          <span class="video-play" aria-hidden="true"><span class="video-play-tri"></span></span>
+        </div>
+        <div class="video-body">
+          <h3 class="h4 h4--on-dark">Узел до и после ремонта</h3>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     3. Как проходит ремонт — пять шагов, по строке
      ============================================================ -->
 <section class="section">
   <div class="container">
 
     <div class="block-head block-head--narrow">
       <h2 class="h2">Как проходит ремонт</h2>
-      <p class="lead">От звонка до работающей тяги — пять шагов. Сначала диагностика и заключение, потом смета, и только после согласования — работы.</p>
     </div>
 
     <ol class="steps">
       <li class="step">
         <span class="step-num">1</span>
-        <h3 class="h4">Заявка и разговор</h3>
-        <p>Вячеслав, мастер компании, перезвонит и расспросит про симптомы: когда задувает, где сыреет, что уже пробовали. Часто причину видно уже по описанию.</p>
+        <h3 class="h4">Заявка</h3>
+        <p>Мастер перезвонит и расспросит про симптомы.</p>
       </li>
       <li class="step">
         <span class="step-num">2</span>
-        <h3 class="h4">Диагностика на объекте</h3>
-        <p>Смотрим котельную, узел и выход на кровле, проверяем тягу. Без выезда честно назвать причину и объём работ нельзя.</p>
+        <h3 class="h4">Диагностика</h3>
+        <p>Смотрим узел и кровлю, проверяем тягу.</p>
       </li>
       <li class="step">
         <span class="step-num">3</span>
-        <h3 class="h4">Заключение и смета</h3>
-        <p>Говорим, в чём причина и что нужно сделать. Стоимость и сроки фиксируем в договоре — дальше они не меняются.</p>
+        <h3 class="h4">Смета</h3>
+        <p>Называем причину, цену и срок. Фиксируем в договоре.</p>
       </li>
       <li class="step">
         <span class="step-num">4</span>
         <h3 class="h4">Ремонт</h3>
-        <p>Недостающие детали — оголовок, утепление, элементы примыкания — делаем на своём производстве под ваш узел, а не подбираем из того, что нашлось.</p>
+        <p>Недостающие детали делаем на своём производстве.</p>
       </li>
       <li class="step">
         <span class="step-num">5</span>
-        <h3 class="h4">Проверка тяги и сдача</h3>
-        <p>После работ проверяем тягу и примыкание. На выходе — акт и гарантия на выполненные работы по договору.</p>
+        <h3 class="h4">Сдача</h3>
+        <p>Проверяем тягу. Акт и гарантия по договору.</p>
       </li>
     </ol>
 
@@ -163,100 +203,50 @@
 
 
 <!-- ============================================================
-     2.5 Диагностика
-     ЗАГЛУШКА: платность и стоимость выезда/диагностики.
+     4. Цены
+     ЗАГЛУШКИ: суммы и платность диагностики.
      ============================================================ -->
-<section class="section section--tint" id="diagnostika">
-  <div class="container split split--start">
-
-    <div class="split-main">
-      <div class="block-head">
-        <h2 class="h2">Диагностика — с неё начинается ремонт</h2>
-        <p class="lead">Вентиляцию не чинят «вслепую». Сначала находим причину: замеряем тягу, смотрим узел и выход на кровле, проверяем утепление и сечение. По итогу — понятное заключение и смета.</p>
-      </div>
-
-      <!-- ЗАГЛУШКА: уточнить у клиента, платный ли выезд/диагностика и сколько стоит -->
-      <p class="field-hint">Стоимость и условия выезда на диагностику: [ЗАГЛУШКА — уточнить: бесплатно / фиксированная сумма / засчитывается в стоимость ремонта].</p>
-    </div>
-
-    <div class="value-card">
-      <p class="value-card-title">Что входит в диагностику</p>
-      <ul class="marks">
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Проверка тяги в котельной и по вытяжным каналам</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Осмотр узла: высота, сечение, утепление, оголовок</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Осмотр выхода на кровле и примыкания</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Заключение: в чём причина и что нужно сделать</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Смета с фиксированной ценой и сроком</span></li>
-      </ul>
-      <a class="btn btn--primary btn--wide" href="#zayavka">Записаться на диагностику</a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ============================================================
-     3. Сколько стоит ремонт
-     ЗАГЛУШКИ: цены. Не выдумываем — до подтверждения заказчиком
-     в колонке стоит [ЗАГЛУШКА]. Точная цена в любом случае
-     после диагностики.
-     ============================================================ -->
-<section class="section" id="cena">
+<section class="section section--tint" id="cena">
   <div class="container split split--start">
 
     <div class="split-main">
       <div class="block-head">
         <h2 class="h2">Сколько стоит ремонт</h2>
-        <p class="lead">Точную цену называем после диагностики: она зависит от причины и объёма работ. Порядок сумм по типам работ такой.</p>
+        <p class="lead">Точную цену называем после диагностики. Порядок сумм такой.</p>
       </div>
 
       <div class="price-list">
         <div class="price-row">
-          <div class="price-row-text">
-            <h3 class="h4">Утепление и устранение конденсата</h3>
-            <p>Двухконтурное утепление канала, отвод конденсата, замена оголовка.</p>
-          </div>
+          <div class="price-row-text"><h3 class="h4">Утепление, конденсат</h3></div>
           <p class="price-value">[ЗАГЛУШКА]</p>
         </div>
-
         <div class="price-row">
-          <div class="price-row-text">
-            <h3 class="h4">Наращивание высоты, вывод из зоны подпора</h3>
-            <p>Добавляем высоту и меняем сечение по расчёту — чтобы тягу не опрокидывало.</p>
-          </div>
+          <div class="price-row-text"><h3 class="h4">Наращивание высоты, сечение</h3></div>
           <p class="price-value">[ЗАГЛУШКА]</p>
         </div>
-
         <div class="price-row">
-          <div class="price-row-text">
-            <h3 class="h4">Ремонт примыкания к кровле</h3>
-            <p>Переделка узла прохода через кровлю, герметизация, фартук. Гарантия 2 года на стык.</p>
-          </div>
+          <div class="price-row-text"><h3 class="h4">Ремонт примыкания к кровле</h3></div>
           <p class="price-value">[ЗАГЛУШКА]</p>
         </div>
-
         <div class="price-row">
-          <div class="price-row-text">
-            <h3 class="h4">Переборка самодельного узла</h3>
-            <p>Демонтаж кустарного узла и сборка вентиляции по расчёту, если ремонт целесообразен.</p>
-          </div>
+          <div class="price-row-text"><h3 class="h4">Переборка самодельного узла</h3></div>
           <p class="price-value">[ЗАГЛУШКА]</p>
         </div>
       </div>
 
-      <p class="field-hint">Цена фиксируется в договоре после диагностики. Диагностика ни к чему вас не обязывает.</p>
+      <!-- ЗАГЛУШКА: платный ли выезд/диагностика -->
+      <p class="field-hint">Диагностика: [ЗАГЛУШКА — бесплатно / фикс. сумма]. Цена ремонта фиксируется в договоре.</p>
     </div>
 
     <div class="value-card">
-      <p class="value-card-title">Что входит в стоимость работ</p>
+      <p class="value-card-title">Что входит</p>
       <ul class="marks">
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Диагностика и инженерное заключение по узлу</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Изготовление недостающих деталей на своём производстве</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Доставка на объект и работы на месте</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Проверка тяги после ремонта</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Гарантия на выполненные работы по договору</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Диагностика и заключение по узлу</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Детали со своего производства</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Работы и проверка тяги</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Гарантия по договору</span></li>
       </ul>
-      <a class="btn btn--primary btn--wide" href="#zayavka">Узнать цену по своему узлу</a>
+      <a class="btn btn--primary btn--wide" href="#zayavka">Узнать цену</a>
     </div>
 
   </div>
@@ -264,97 +254,59 @@
 
 
 <!-- ============================================================
-     3.5 Чем отличается наш ремонт
+     5. Чем отличаемся — 4 карточки по строке
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+    <div class="block-head block-head--narrow">
+      <h2 class="h2">Чем отличается наш ремонт</h2>
+    </div>
+    <div class="num-grid">
+      <div class="num-card">
+        <span class="num">01</span>
+        <div class="num-text"><h3 class="h4">Инженерная диагностика</h3><p>Находим причину, а не глушим симптом.</p></div>
+      </div>
+      <div class="num-card">
+        <span class="num">02</span>
+        <div class="num-text"><h3 class="h4">Свои детали</h3><p>Оголовки и элементы делаем под ваш узел.</p></div>
+      </div>
+      <div class="num-card">
+        <span class="num">03</span>
+        <div class="num-text"><h3 class="h4">Кровельщики</h3><p>Примыкание переделываем сами, гарантия 2 года.</p></div>
+      </div>
+      <div class="num-card">
+        <span class="num">04</span>
+        <div class="num-text"><h3 class="h4">Договор</h3><p>Цена, срок и гарантия — на бумаге.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     6. Когда ремонт, а когда честнее заменить
+     Кросс-ссылка на монтаж под ключ (index.html).
      ============================================================ -->
 <section class="section section--tint">
   <div class="container split split--start">
 
-    <div class="split-main">
-      <header class="block-head">
-        <h2 class="h2">Чем отличается наш ремонт</h2>
-        <p class="lead">Мастер приедет и заглушит симптом за день. Мы сначала находим причину, чиним по расчёту и отвечаем за кровлю вокруг узла.</p>
-      </header>
-
-      <div class="num-grid">
-
-        <div class="num-card">
-          <span class="num">01</span>
-          <div class="num-text">
-            <h3 class="h4">Инженерная диагностика</h3>
-            <p>Замеряем тягу и считаем узел под ваш котёл и дом. Причину находим, а не гадаем — и чиним именно её.</p>
-          </div>
-        </div>
-
-        <div class="num-card">
-          <span class="num">02</span>
-          <div class="num-text">
-            <h3 class="h4">Свои детали под ваш узел</h3>
-            <p>Оголовки, элементы утепления и примыкания делаем на своём производстве под нужный размер, а не подбираем из наличия.</p>
-          </div>
-        </div>
-
-        <div class="num-card">
-          <span class="num">03</span>
-          <div class="num-text">
-            <h3 class="h4">Кровельщики для примыкания</h3>
-            <p>Протечка у трубы — наша зона. Мы не только вентиляционщики, но и профессиональные кровельщики, стык переделываем сами.</p>
-          </div>
-        </div>
-
-        <div class="num-card">
-          <span class="num">04</span>
-          <div class="num-text">
-            <h3 class="h4">Гарантия по договору</h3>
-            <p>Работы, сроки и гарантия прописаны в договоре. На примыкание к кровле — 2 года.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <aside class="founder">
-      <div class="founder-photo">
-        <!-- TODO: фото основателя (вертикальный кадр, ~840×1120) в assets/img/founder.jpg -->
-        <div class="img-placeholder" data-placeholder="Фото основателя, вертикальный кадр"></div>
-      </div>
-      <div class="founder-name">
-        <p class="founder-title">Григорий Корноухов</p>
-        <p class="caption">Основатель компании</p>
-      </div>
-      <p class="hand founder-quote">Заглушить симптом можно за час. Мы находим причину, чтобы к узлу больше не возвращаться</p>
-    </aside>
-
-  </div>
-</section>
-
-
-<!-- ============================================================
-     4. Когда ремонт решает, а когда честнее заменить
-     Честный блок: не обещаем починить неремонтопригодное.
-     Кросс-ссылка на страницу монтажа новой шахты (index.html).
-     ============================================================ -->
-<section class="section">
-  <div class="container split split--start">
-
     <div class="value-card">
-      <p class="value-card-title">Ремонтируем, когда причина локальная</p>
+      <p class="value-card-title">Ремонтируем</p>
       <ul class="marks marks--wide">
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Не хватает высоты или занижено сечение — считаем и наращиваем</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Нет утепления — конденсат и наледь уходят после утепления</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Течёт примыкание — переделываем стык, а сам узел рабочий</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Нужно заменить оголовок или отдельные элементы</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Не хватает высоты или сечения</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Нет утепления — конденсат и наледь</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--good" aria-hidden="true">✓</span><span>Течёт примыкание, узел рабочий</span></li>
       </ul>
     </div>
 
     <div class="value-card value-card--plain">
-      <p class="value-card-title">Честнее собрать новый узел, когда</p>
+      <p class="value-card-title">Честнее заменить</p>
       <ul class="marks marks--wide">
-        <li class="mark"><span class="mark-icon mark-icon--dot" aria-hidden="true">–</span><span>Узел собран без расчёта целиком, и переделка выходит дороже нового</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--dot" aria-hidden="true">–</span><span>Каналы сведены неправильно, тягу не вытянуть точечным ремонтом</span></li>
-        <li class="mark"><span class="mark-icon mark-icon--dot" aria-hidden="true">–</span><span>Металл прогнил, детали не держат — латать нечего</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--dot" aria-hidden="true">–</span><span>Узел собран без расчёта целиком</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--dot" aria-hidden="true">–</span><span>Каналы сведены неправильно</span></li>
+        <li class="mark"><span class="mark-icon mark-icon--dot" aria-hidden="true">–</span><span>Металл прогнил — латать нечего</span></li>
       </ul>
-      <p class="field-hint">В этом случае считаем и монтируем вентшахту под ключ — по расчёту, с двухконтурным утеплением и гарантией на примыкание.</p>
-      <a class="btn btn--ghost btn--wide" href="index.html">Смотреть монтаж вентшахты под ключ</a>
+      <a class="btn btn--ghost btn--wide" href="index.html">Монтаж шахты под ключ</a>
     </div>
 
   </div>
@@ -362,58 +314,38 @@
 
 
 <!-- ============================================================
-     5. Объекты и отзывы
-     ЗАГЛУШКИ: нужны фото узлов до/после и реальные отзывы.
-     Отзывы не сочиняем — в карточках стоят подсказки, какой
-     именно отзыв туда просить у заказчика.
+     7. Объекты — фото-галерея
+     ЗАГЛУШКИ: реальные фото ремонта загрузить в assets/img.
      ============================================================ -->
-<section class="section section--tint" id="obyekty">
+<section class="section" id="obyekty">
   <div class="container">
 
     <div class="block-head block-head--narrow">
-      <h2 class="h2">Объекты и отзывы</h2>
-      <p class="lead">Узлы в Московской области, которые мы приводили в порядок: обратная тяга, конденсат, протечки на кровле.</p>
+      <h2 class="h2">Наши объекты</h2>
     </div>
 
     <div class="gallery">
       <figure class="gallery-cell">
-        <div class="img-placeholder" data-placeholder="Фото: узел до ремонта"></div>
-        <figcaption class="gallery-caption">[ЗАГЛУШКА: что было — симптом, посёлок]</figcaption>
+        <picture>
+          <source type="image/jpeg" srcset="assets/img/gas-ours-640.jpg 640w, assets/img/gas-ours-960.jpg 960w" sizes="(max-width: 860px) 100vw, 400px">
+          <img src="assets/img/gas-ours-640.jpg" width="1440" height="1080" loading="lazy" decoding="async" alt="Вентшахта по расчёту на кровле">
+        </picture>
+        <figcaption class="gallery-caption">Шахта по расчёту, с утеплением</figcaption>
       </figure>
       <figure class="gallery-cell">
-        <div class="img-placeholder" data-placeholder="Фото: узел после ремонта"></div>
-        <figcaption class="gallery-caption">[ЗАГЛУШКА: что сделали, посёлок]</figcaption>
+        <picture>
+          <source type="image/jpeg" srcset="assets/img/gas-usual-640.jpg 640w, assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 860px) 100vw, 400px">
+          <img src="assets/img/gas-usual-640.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Неутеплённая труба — типичная проблема">
+        </picture>
+        <figcaption class="gallery-caption">Проблемный узел без утепления</figcaption>
       </figure>
       <figure class="gallery-cell">
         <div class="img-placeholder" data-placeholder="Фото: примыкание к кровле"></div>
-        <figcaption class="gallery-caption">[ЗАГЛУШКА: ремонт примыкания, посёлок]</figcaption>
+        <figcaption class="gallery-caption">[ЗАГЛУШКА: ремонт примыкания]</figcaption>
       </figure>
       <figure class="gallery-cell">
-        <div class="img-placeholder" data-placeholder="Фото: утепление канала"></div>
-        <figcaption class="gallery-caption">[ЗАГЛУШКА: устранение конденсата, посёлок]</figcaption>
-      </figure>
-      <figure class="gallery-cell">
-        <div class="img-placeholder" data-placeholder="Фото: замена оголовка"></div>
-        <figcaption class="gallery-caption">[ЗАГЛУШКА: тип работ, посёлок]</figcaption>
-      </figure>
-      <figure class="gallery-cell">
-        <div class="img-placeholder" data-placeholder="Фото: переборка узла"></div>
-        <figcaption class="gallery-caption">[ЗАГЛУШКА: тип работ, посёлок]</figcaption>
-      </figure>
-    </div>
-
-    <div class="reviews">
-      <figure class="review review--empty">
-        <blockquote>[ЗАГЛУШКА: отзыв заказчика, у которого задувало котёл — что было причиной и как ведёт себя тяга после ремонта]</blockquote>
-        <figcaption><span class="review-name">[Имя]</span><span class="review-meta">[тип дома, посёлок]</span></figcaption>
-      </figure>
-      <figure class="review review--empty">
-        <blockquote>[ЗАГЛУШКА: отзыв заказчика, у которого был конденсат и наледь — ушли ли сырость и намерзание после утепления]</blockquote>
-        <figcaption><span class="review-name">[Имя]</span><span class="review-meta">[тип дома, посёлок]</span></figcaption>
-      </figure>
-      <figure class="review review--empty">
-        <blockquote>[ЗАГЛУШКА: отзыв заказчика, у которого текла кровля в месте выхода трубы — про переделку примыкания]</blockquote>
-        <figcaption><span class="review-name">[Имя]</span><span class="review-meta">[тип дома, посёлок]</span></figcaption>
+        <div class="img-placeholder" data-placeholder="Фото: узел после ремонта"></div>
+        <figcaption class="gallery-caption">[ЗАГЛУШКА: после ремонта]</figcaption>
       </figure>
     </div>
 
@@ -422,101 +354,60 @@
 
 
 <!-- ============================================================
-     5.5 Гарантия и договор
-     ЗАГЛУШКА: срок гарантии на прочие работы, кроме примыкания.
+     8. Гарантия — 4 карточки по строке
+     ЗАГЛУШКА: срок гарантии на прочие работы.
      ============================================================ -->
-<section class="section" id="garantiya">
-  <div class="container split split--start">
-
-    <div class="split-main">
-      <div class="block-head">
-        <h2 class="h2">Что записано в договоре</h2>
-        <p class="lead">Ремонт делаем по договору: причину, объём работ, цену и сроки фиксируем после диагностики. Гарантия на примыкание прописана, а не обещана на словах.</p>
+<section class="section section--tint" id="garantiya">
+  <div class="container">
+    <div class="block-head block-head--narrow">
+      <h2 class="h2">Что в договоре</h2>
+    </div>
+    <div class="num-grid">
+      <div class="num-card">
+        <span class="num">01</span>
+        <div class="num-text"><h3 class="h4">Гарантия 2 года на примыкание</h3><p>Протечку в срок устраняем за свой счёт.</p></div>
       </div>
-
-      <div class="num-grid">
-        <div class="num-card">
-          <span class="num">01</span>
-          <div class="num-text">
-            <h3 class="h4">Гарантия 2 года на примыкание</h3>
-            <p>Стык кровли и трубы — наша зона ответственности. Протечка в гарантийный срок устраняется за наш счёт.</p>
-          </div>
-        </div>
-        <div class="num-card">
-          <span class="num">02</span>
-          <div class="num-text">
-            <h3 class="h4">Гарантия на выполненные работы</h3>
-            <!-- ЗАГЛУШКА: уточнить срок гарантии на прочие работы (утепление, наращивание, оголовок) -->
-            <p>На остальные работы — [ЗАГЛУШКА: срок]. Что именно чиним и на что даём гарантию, прописываем в договоре.</p>
-          </div>
-        </div>
-        <div class="num-card">
-          <span class="num">03</span>
-          <div class="num-text">
-            <h3 class="h4">Фиксированная цена</h3>
-            <p>Сумму определяем после диагностики. Доплат «нашли ещё работы» по ходу ремонта не будет.</p>
-          </div>
-        </div>
-        <div class="num-card">
-          <span class="num">04</span>
-          <div class="num-text">
-            <h3 class="h4">Один подрядчик на всё</h3>
-            <p>Диагностика, детали, ремонт узла и кровельные работы — по одному договору. Перекладывать ответственность не на кого.</p>
-          </div>
-        </div>
+      <div class="num-card">
+        <span class="num">02</span>
+        <!-- ЗАГЛУШКА: срок гарантии на прочие работы -->
+        <div class="num-text"><h3 class="h4">Гарантия на работы</h3><p>На остальное — [ЗАГЛУШКА: срок].</p></div>
+      </div>
+      <div class="num-card">
+        <span class="num">03</span>
+        <div class="num-text"><h3 class="h4">Фиксированная цена</h3><p>Без доплат по ходу ремонта.</p></div>
+      </div>
+      <div class="num-card">
+        <span class="num">04</span>
+        <div class="num-text"><h3 class="h4">Один подрядчик</h3><p>Ремонт и кровля — по одному договору.</p></div>
       </div>
     </div>
-
-    <div class="doc-card">
-      <div class="doc-shot">
-        <!-- TODO: скан обезличенного договора или гарантийного талона -->
-        <div class="img-placeholder" data-placeholder="Скан договора, обезличенный"></div>
-      </div>
-      <p class="field-hint">Покажем договор до начала работ — можно прочитать целиком и обсудить формулировки.</p>
-    </div>
-
   </div>
 </section>
 
 
 <!-- ============================================================
-     5.6 Производство
+     9. Производство — коротко + цифры
+     ЗАГЛУШКИ: фото производства.
      ============================================================ -->
-<section class="section section--tint" id="proizvodstvo">
+<section class="section" id="proizvodstvo">
   <div class="container split split--center">
 
     <div class="split-main split-main--gap">
-      <h2 class="h2">Детали для ремонта делаем сами</h2>
-      <p class="lead">Мы не перепродаём готовые трубы. Оголовки, колпаки, элементы утепления и примыкания изготавливаем сами — из жести, с которой работаем с 1993 года.</p>
-      <p class="lead">Поэтому для ремонта не нужно ждать «ближайший подходящий размер»: недостающую деталь под ваш узел мы просто изготавливаем.</p>
+      <h2 class="h2">Детали делаем сами</h2>
+      <p class="lead">Оголовки, утепление и элементы примыкания изготавливаем на своём производстве под ваш узел — не ждём «подходящий размер».</p>
 
       <dl class="stats">
-        <div class="stat">
-          <dt class="stat-value">1993</dt>
-          <dd class="stat-label">год, с которого работаем с жестью</dd>
-        </div>
-        <div class="stat">
-          <dt class="stat-value">6500+</dt>
-          <dd class="stat-label">объектов в Московской области</dd>
-        </div>
-        <div class="stat">
-          <dt class="stat-value">2</dt>
-          <dd class="stat-label">бригады: инженеры и кровельщики</dd>
-        </div>
+        <div class="stat"><dt class="stat-value">1993</dt><dd class="stat-label">с этого года работаем с жестью</dd></div>
+        <div class="stat"><dt class="stat-value">6500+</dt><dd class="stat-label">объектов в Подмосковье</dd></div>
+        <div class="stat"><dt class="stat-value">2</dt><dd class="stat-label">бригады: инженеры и кровельщики</dd></div>
       </dl>
     </div>
 
     <div class="mosaic">
-      <!-- TODO: три фото производства -->
-      <div class="mosaic-cell mosaic-cell--wide">
-        <div class="img-placeholder" data-placeholder="Цех: листогиб, раскрой жести"></div>
-      </div>
-      <div class="mosaic-cell">
-        <div class="img-placeholder" data-placeholder="Готовые оголовки и детали"></div>
-      </div>
-      <div class="mosaic-cell">
-        <div class="img-placeholder" data-placeholder="Бригада на объекте"></div>
-      </div>
+      <!-- TODO: фото производства -->
+      <div class="mosaic-cell mosaic-cell--wide"><div class="img-placeholder" data-placeholder="Цех: раскрой жести"></div></div>
+      <div class="mosaic-cell"><div class="img-placeholder" data-placeholder="Готовые оголовки"></div></div>
+      <div class="mosaic-cell"><div class="img-placeholder" data-placeholder="Бригада на объекте"></div></div>
     </div>
 
   </div>
@@ -524,97 +415,55 @@
 
 
 <!-- ============================================================
-     6. Частые вопросы
+     10. FAQ — текст спрятан под спойлеры
      ============================================================ -->
 <section class="section section--faq">
   <div class="container split split--start split--faq">
 
     <div class="faq-intro">
       <h2 class="h2">Частые вопросы</h2>
-      <p class="lead">Отвечает Вячеслав, мастер компании. Если вопроса здесь нет — позвоните, ответим по вашему узлу.</p>
       <a class="phone" href="tel:+74951197285">+7 (495) 119-72-85</a>
     </div>
 
     <div class="faq-list">
-
       <details class="faq-item">
-        <summary class="faq-summary">
-          <span>Можно отремонтировать или придётся всё менять?</span>
-          <span class="faq-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="faq-answer">Чаще достаточно устранить причину: утеплить канал, нарастить высоту, переделать примыкание. Точно скажем после диагностики. Если узел неремонтопригоден, честно предложим собрать новый — навязывать замену там, где хватает ремонта, не станем.</div>
+        <summary class="faq-summary"><span>Ремонт или замена?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-answer">Чаще хватает устранить причину: утепление, высота, примыкание. Если узел неремонтопригоден — честно скажем и посчитаем новый.</div>
       </details>
-
       <details class="faq-item">
-        <summary class="faq-summary">
-          <span>Почему задувает котёл?</span>
-          <span class="faq-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="faq-answer">Тягу опрокидывает: выход трубы попадает в зону ветрового подпора или занижено сечение. При боковом ветре воздух идёт обратно, датчик тяги гасит котёл. Считаем высоту и сечение под ваш дом и выводим трубу выше зоны подпора.</div>
+        <summary class="faq-summary"><span>Почему задувает котёл?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-answer">Тягу опрокидывает ветром: труба ниже зоны подпора или занижено сечение. Считаем и выводим выше.</div>
       </details>
-
       <details class="faq-item">
-        <summary class="faq-summary">
-          <span>Откуда конденсат и наледь на трубе?</span>
-          <span class="faq-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="faq-answer">Канал не утеплён: тёплый влажный воздух остывает о холодный металл, влага оседает внутри, а на срезе зимой намерзает наледь. Ставим двухконтурное утепление и отвод конденсата — сырость и намерзание уходят.</div>
+        <summary class="faq-summary"><span>Откуда конденсат и наледь?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-answer">Канал не утеплён. Ставим двухконтурное утепление и отвод конденсата — сырость и намерзание уходят.</div>
       </details>
-
       <details class="faq-item">
-        <summary class="faq-summary">
-          <span>Течёт кровля в месте выхода трубы — это к вам?</span>
-          <span class="faq-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="faq-answer">Да. Примыкание — наша компетенция, кровельные работы делаем сами. Переделываем узел прохода через кровлю по своей технологии и даём на стык гарантию 2 года по договору.</div>
+        <summary class="faq-summary"><span>Течёт кровля у трубы — к вам?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-answer">Да. Примыкание переделываем сами, кровельные работы — наша компетенция. Гарантия на стык 2 года.</div>
       </details>
-
       <details class="faq-item">
-        <summary class="faq-summary">
-          <span>Сколько стоит диагностика и ремонт?</span>
-          <span class="faq-plus" aria-hidden="true">+</span>
-        </summary>
-        <!-- ЗАГЛУШКА: условия диагностики и порядок цен на ремонт -->
-        <div class="faq-answer">Условия диагностики: [ЗАГЛУШКА — уточнить]. Цену ремонта называем после выезда: она зависит от причины и объёма работ. Сумму и сроки фиксируем в договоре, дальше они не меняются.</div>
+        <summary class="faq-summary"><span>Сколько стоит?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <!-- ЗАГЛУШКА -->
+        <div class="faq-answer">Диагностика: [ЗАГЛУШКА]. Цену ремонта называем после выезда и фиксируем в договоре.</div>
       </details>
-
-      <details class="faq-item">
-        <summary class="faq-summary">
-          <span>Ремонтируете самодельную вентиляцию?</span>
-          <span class="faq-plus" aria-hidden="true">+</span>
-        </summary>
-        <div class="faq-answer">Да, диагностируем узел от прежних строителей и приводим его в порядок. Если он собран без расчёта целиком и переделка выходит дороже нового узла — скажем прямо и посчитаем оба варианта.</div>
-      </details>
-
-      <details class="faq-item">
-        <summary class="faq-summary">
-          <span>Куда вы выезжаете?</span>
-          <span class="faq-plus" aria-hidden="true">+</span>
-        </summary>
-        <!-- ЗАГЛУШКА: уточнить у клиента, выезжаете ли за пределы области и на каких условиях -->
-        <div class="faq-answer">Работаем по Московской области, производство в Сергиевом Посаде. [ЗАГЛУШКА: уточнить, выезжаете ли за пределы области и на каких условиях]</div>
-      </details>
-
     </div>
   </div>
 </section>
 
 
 <!-- ============================================================
-     7. Заявка — точка, куда ведут все CTA страницы
-     Форма и логика общие с главной (assets/main.js):
-     поле выбора оставлено с name="stage", чтобы sendLead()
-     работал без изменений; значения переписаны под ремонт.
-     TODO: подключить отправку в CRM или на почту — см. main.js.
+     11. Заявка — форма общая с главной (assets/main.js)
+     name="stage" сохранён, значения под ремонт.
      ============================================================ -->
 <section class="section section--tint" id="zayavka">
   <div class="container split split--start">
 
     <div class="form-intro">
       <h2 class="h2">Запишитесь на диагностику</h2>
-      <p class="lead">Оставьте телефон — Вячеслав, мастер компании, перезвонит и расспросит про симптомы. Диагностика и выезд ни к чему вас не обязывают.</p>
+      <p class="lead">Оставьте телефон — мастер перезвонит. Диагностика ни к чему не обязывает.</p>
       <a class="phone" href="tel:+74951197285">+7 (495) 119-72-85</a>
-      <p class="caption">info@krovmast.ru · Производство в Сергиевом Посаде</p>
+      <p class="caption">info@krovmast.ru · Сергиев Посад</p>
     </div>
 
     <form class="lead-form" id="lead-form" novalidate>
@@ -630,30 +479,29 @@
       </div>
 
       <div class="field">
-        <label class="field-label" for="lead-stage">Что происходит с вентиляцией</label>
+        <label class="field-label" for="lead-stage">Что с вентиляцией</label>
         <select class="field-input" id="lead-stage" name="stage">
           <option value="">Не выбрано</option>
-          <option value="obratnaya-tyaga">Задувает котёл, обратная тяга</option>
-          <option value="kondensat">Конденсат, сырость, наледь</option>
-          <option value="slabaya-tyaga">Не тянет вытяжка, запах</option>
-          <option value="protechka">Течёт кровля в месте выхода трубы</option>
-          <option value="samodel">Самодельная вентиляция, нужна проверка</option>
-          <option value="drugoe">Другое / пока не понятно</option>
+          <option value="obratnaya-tyaga">Задувает котёл</option>
+          <option value="kondensat">Конденсат, наледь</option>
+          <option value="slabaya-tyaga">Не тянет вытяжка</option>
+          <option value="protechka">Течёт кровля у трубы</option>
+          <option value="samodel">Самодельный узел</option>
+          <option value="drugoe">Другое</option>
         </select>
-        <p class="field-hint">По симптому мастер уже прикинет причину и что смотреть на выезде.</p>
       </div>
 
       <label class="field-check">
         <input type="checkbox" id="lead-consent" name="consent" required>
-        <!-- ЗАГЛУШКА: подставить ссылку на политику обработки персональных данных -->
+        <!-- ЗАГЛУШКА: ссылка на политику ПДн -->
         <span>Согласен на обработку персональных данных</span>
       </label>
       <p class="field-error" id="lead-consent-error" hidden>Без согласия мы не сможем вам перезвонить</p>
 
       <button class="btn btn--primary btn--wide" type="submit">Записаться на диагностику</button>
-      <p class="field-hint">Перезваниваем в рабочее время, обычно в течение часа.</p>
+      <p class="field-hint">Перезваниваем обычно в течение часа.</p>
 
-      <p class="form-done" id="lead-done" hidden role="status">Заявка принята. Вячеслав перезвонит вам на указанный номер.</p>
+      <p class="form-done" id="lead-done" hidden role="status">Заявка принята. Мы перезвоним вам на указанный номер.</p>
     </form>
 
   </div>
@@ -661,15 +509,14 @@
 
 
 <!-- ============================================================
-     8. Футер
-     ЗАГЛУШКИ: юрлицо, ИНН, адрес производства, политика ПДн.
+     12. Футер
      ============================================================ -->
 <footer class="footer">
   <div class="container footer-grid">
 
     <div class="footer-brand">
       <p class="footer-mark">ВЕНТШАХТЫ.РФ</p>
-      <p class="footer-text">Проектирование, производство, монтаж и ремонт естественной вентиляции в частных домах. Семейное производство, работаем с жестью с 1993 года.</p>
+      <p class="footer-text">Проектирование, производство, монтаж и ремонт вентиляции в частных домах. Работаем с жестью с 1993 года.</p>
     </div>
 
     <div class="footer-col">
@@ -686,23 +533,21 @@
 
     <div class="footer-col">
       <p class="caption caption--on-dark">Разделы</p>
-      <a class="footer-link" href="#simptomy">С чем к нам приходят</a>
-      <a class="footer-link" href="#cena">Цены на ремонт</a>
-      <a class="footer-link" href="#garantiya">Гарантия и договор</a>
-      <a class="footer-link" href="index.html">Монтаж вентшахты под ключ</a>
+      <a class="footer-link" href="#simptomy">С чем приходят</a>
+      <a class="footer-link" href="#video">Видео</a>
+      <a class="footer-link" href="#cena">Цены</a>
+      <a class="footer-link" href="index.html">Монтаж под ключ</a>
     </div>
 
   </div>
 
   <div class="container footer-bottom">
-    <p class="footer-legal">Вентшахты.рф · Проектирование, производство, монтаж и ремонт вентиляции</p>
-    <!-- TODO: подставить адрес политики обработки персональных данных -->
+    <p class="footer-legal">Вентшахты.рф · Ремонт и монтаж вентиляции</p>
+    <!-- TODO: ссылка на политику ПДн -->
     <a class="footer-link" href="#">Политика обработки персональных данных</a>
   </div>
 </footer>
 
-<!-- Сквозная кнопка на мобильном: появляется, когда первый экран ушёл
-     вверх, и прячется, когда человек долистал до формы -->
 <div class="sticky-cta" id="sticky-cta" hidden>
   <a class="btn btn--ghost" href="tel:+74951197285">Позвонить</a>
   <a class="btn btn--primary" href="#zayavka">На диагностику</a>

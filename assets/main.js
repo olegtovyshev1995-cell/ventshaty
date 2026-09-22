@@ -152,7 +152,9 @@
   };
 
   cards.forEach(function (card, i) {
-    var url = VIDEO_URLS[i];
+    // Ссылку берём сначала из самой карточки (data-video-url) — так у каждой
+    // страницы свои ролики, — и только потом из общего VIDEO_URLS.
+    var url = card.getAttribute('data-video-url') || VIDEO_URLS[i];
     if (!url) return;
 
     var media = card.querySelector('.video-media');
