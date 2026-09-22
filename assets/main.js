@@ -170,4 +170,92 @@
       openDialog(url, title);
     });
   });
+
+  /* --------------------------------------------------------
+     3. Форма заявки
+     -------------------------------------------------------- */
+
+  // Куда уводим человека после успешной отправки
+  var THANK_YOU_URL = 'https://вентшахты.рф/thankyou_page.php';
+
+  /**
+   * TODO: подключить отправку заявки.
+   * Сейчас функция ничего не отправляет — форма проверяет поля и сразу
+   * уводит на страницу «спасибо», то есть заявка никуда не приходит.
+   * Подставьте сюда запрос в CRM или на почтовый обработчик, например:
+   *
+   *   return fetch('/api/lead', {
+   *     method: 'POST',
+   *     headers: { 'Content-Type': 'application/json' },
+   *     body: JSON.stringify(lead)
+   *   }).then(function (r) {
+   *     if (!r.ok) throw new Error('lead: ' + r.status);
+   *   });
+   *
+   * Редирект произойдёт только после того, как промис здесь выполнится.
+   */
+  var sendLead = function (lead) {
+    if (window.console) console.info('Заявка (отправка не подключена):', lead);
+    return Promise.resolve();
+  };
+
+  var form = document.getElementById('lead-form');
+
+  if (form) {
+    var phone = document.getElementById('lead-phone');
+    var phoneError = document.getElementById('lead-phone-error');
+    var consent = document.getElementById('lead-consent');
+    var consentError = document.getElementById('lead-consent-error');
+    var done = document.getElementById('lead-done');
+
+    // Номер считаем пригодным, если в нём набралось хотя бы 10 цифр
+    var digits = function (value) { return (value || '').replace(/\D/g, ''); };
+
+    var setError = function (input, node, show) {
+      if (node) node.hidden = !show;
+      if (input) {
+        input.classList.toggle('is-invalid', show);
+        input.setAttribute('aria-invalid', show ? 'true' : 'false');
+      }
+    };
+
+    phone.addEventListener('input', function () {
+      if (digits(phone.value).length >= 10) setError(phone, phoneError, false);
+    });
+    consent.addEventListener('change', function () {
+      if (consent.checked) setError(null, consentError, false);
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var phoneOk = digits(phone.value).length >= 10;
+      var consentOk = consent.checked;
+
+      setError(phone, phoneError, !phoneOk);
+      setError(null, consentError, !consentOk);
+
+      if (!phoneOk) { phone.focus(); return; }
+      if (!consentOk) { consent.focus(); return; }
+
+      var button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+
+      sendLead({
+        name: form.elements.name.value.trim(),
+        phone: phone.value.trim(),
+        stage: form.elements.stage.value,
+        page: location.pathname
+      }).then(function () {
+        // Подтверждение на случай, если переход не сработает
+        done.hidden = false;
+        window.location.assign(THANK_YOU_URL);
+      }).catch(function () {
+        setError(phone, phoneError, false);
+        if (window.alert) alert('Не получилось отправить заявку. Позвоните, пожалуйста: +7 (495) 119-72-85');
+      }).then(function () {
+        button.disabled = false;
+      });
+    });
+  }
 })();

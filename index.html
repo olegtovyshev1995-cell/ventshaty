@@ -13,7 +13,55 @@
 <body>
 
 <!-- ============================================================
-     1. Галерея «как делают обычно / как делаем мы»
+     0. Первый экран
+     H1 — ключевая фраза. Подзаголовок по 4U:
+     польза (смонтируем под ваш дом) · уникальность (все каналы
+     в одном объёме, двухконтурное утепление) · конкретика
+     (1 м², 2 года) · срочность (за 7 дней).
+     ============================================================ -->
+<section class="section hero">
+  <div class="container hero-grid">
+
+    <div class="hero-text">
+      <span class="eyebrow-pill">Сергиев Посад и Московская область</span>
+      <h1 class="h1">Вентиляция для газового котла в частном доме</h1>
+      <p class="lead">Спроектируем и смонтируем вентшахту под ваш дом за 7 дней: все каналы дома сводим в один объём менее 1 м², двухконтурное утепление, гарантия 2 года на примыкание к кровле по договору.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#zayavka">Рассчитать шахту под мой дом</a>
+        <a class="btn btn--ghost" href="tel:+74951197285">+7 (495) 119-72-85</a>
+      </div>
+
+      <ul class="hero-facts">
+        <li>Работаем с жестью с 1993 года</li>
+        <li>Своё производство</li>
+        <li>Две бригады: инженеры и кровельщики</li>
+      </ul>
+    </div>
+
+    <div class="hero-media">
+      <figure class="hero-shot hero-shot--ours">
+        <picture>
+          <source type="image/jpeg" srcset="assets/img/gas-ours-640.jpg 640w, assets/img/gas-ours-960.jpg 960w, assets/img/gas-ours-1440.jpg 1440w" sizes="(max-width: 900px) 100vw, 520px">
+          <img src="assets/img/gas-ours-960.jpg" width="1440" height="1080" fetchpriority="high" decoding="async" alt="Вентшахта в фальцевой обшивке с дымником на кровле кирпичного дома">
+        </picture>
+        <figcaption class="shot-label shot-label--ours">Наш вариант</figcaption>
+      </figure>
+      <figure class="hero-shot hero-shot--econom">
+        <picture>
+          <source type="image/jpeg" srcset="assets/img/gas-usual-640.jpg 640w, assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 900px) 40vw, 240px">
+          <img src="assets/img/gas-usual-640.jpg" width="1080" height="810" decoding="async" alt="Неутеплённая сэндвич-труба на фасаде деревянного дома">
+        </picture>
+        <figcaption class="shot-label shot-label--econom">Эконом-вариант</figcaption>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     1. Галерея «эконом-вариант / наш вариант»
      ============================================================ -->
 <section class="section section--tint section--gallery" id="gallery">
   <div class="container">
@@ -332,6 +380,63 @@
       </details>
 
     </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     7. Заявка — точка, куда ведут все CTA страницы
+     TODO: подключить отправку в CRM или на почту.
+     Форма сейчас проверяет поля и показывает подтверждение,
+     но данные никуда не уходят — см. sendLead() в main.js.
+     ============================================================ -->
+<section class="section section--tint" id="zayavka">
+  <div class="container split split--start">
+
+    <div class="form-intro">
+      <h2 class="h2">Рассчитаем шахту под ваш дом</h2>
+      <p class="lead">Оставьте телефон — Вячеслав, мастер компании, перезвонит и задаст несколько вопросов по дому. Расчёт и выезд ни к чему вас не обязывают.</p>
+      <a class="phone" href="tel:+74951197285">+7 (495) 119-72-85</a>
+      <p class="caption">info@krovmast.ru · Производство в Сергиевом Посаде</p>
+    </div>
+
+    <form class="lead-form" id="lead-form" novalidate>
+      <div class="field">
+        <label class="field-label" for="lead-name">Как к вам обращаться</label>
+        <input class="field-input" type="text" id="lead-name" name="name" autocomplete="name" placeholder="Имя">
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="lead-phone">Телефон</label>
+        <input class="field-input" type="tel" id="lead-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required aria-describedby="lead-phone-error">
+        <p class="field-error" id="lead-phone-error" hidden>Впишите номер, по которому с вами можно связаться</p>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="lead-stage">На какой стадии дом</label>
+        <select class="field-input" id="lead-stage" name="stage">
+          <option value="">Не выбрано</option>
+          <option value="proekt">Проект, дом ещё не строится</option>
+          <option value="korobka">Коробка готова, до отделки</option>
+          <option value="otdelka">Идёт отделка</option>
+          <option value="gotov">Дом готов, нужна вентиляция</option>
+        </select>
+        <p class="field-hint">До финишной отделки шахта обходится дешевле — поэтому спрашиваем.</p>
+      </div>
+
+      <label class="field-check">
+        <input type="checkbox" id="lead-consent" name="consent" required>
+        <!-- ЗАГЛУШКА: подставить ссылку на политику обработки персональных данных -->
+        <span>Согласен на обработку персональных данных</span>
+      </label>
+      <p class="field-error" id="lead-consent-error" hidden>Без согласия мы не сможем вам перезвонить</p>
+
+      <button class="btn btn--primary btn--wide" type="submit">Получить расчёт</button>
+      <p class="field-hint">Перезваниваем в рабочее время, обычно в течение часа.</p>
+
+      <p class="form-done" id="lead-done" hidden role="status">Заявка принята. Вячеслав перезвонит вам на указанный номер.</p>
+    </form>
+
   </div>
 </section>
 
