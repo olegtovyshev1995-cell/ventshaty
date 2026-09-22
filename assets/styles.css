@@ -1052,6 +1052,53 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
 }
 
 /* ------------------------------------------------------------
+   Страница ремонта — дополнительные блоки
+   Только новые классы, существующие правила не трогаем,
+   поэтому index.html эти строки не задевают.
+   ------------------------------------------------------------ */
+
+/* Карточки «с чем к нам приходят»: симптом → причина → что делаем */
+.symptoms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 16px;
+}
+
+.symptom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 24px 26px;
+  background: var(--paper-0);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-card);
+}
+.symptom p { margin: 0; font-size: 16px; line-height: 1.5; color: var(--ink-700); }
+.symptom .lbl { font-weight: 700; color: var(--ink-900); }
+.symptom .lbl--fix { color: var(--green-700); }
+
+/* Нейтральный вариант value-card — без зелёной рамки и тени */
+.value-card--plain {
+  border-color: var(--line);
+  box-shadow: var(--shadow-card);
+}
+.value-card--plain .value-card-title { color: var(--ink-500); }
+
+/* Метка «эконом»-круга в списке причин (серый минус вместо зелёной галочки
+   мы уже имеем; здесь — нейтральный кружок-точка для перечислений причин) */
+.mark-icon--dot {
+  background: var(--paper-1);
+  color: var(--ink-500);
+  font-size: 15px;
+}
+
+@media (max-width: 640px) {
+  .symptoms { gap: 12px; }
+  .symptom { padding: 22px 18px 24px; }
+}
+
+/* ------------------------------------------------------------
    Заглушки под фото, которых ещё нет
    ------------------------------------------------------------ */
 .img-placeholder {
