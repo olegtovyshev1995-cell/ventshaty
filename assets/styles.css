@@ -305,12 +305,13 @@ a:hover { color: var(--green-600); text-decoration: underline; }
   text-transform: uppercase;
   pointer-events: none;
 }
-.media-badge--bad { background: rgba(35, 39, 43, 0.86); }
-.media-badge--good { background: var(--green-500); }
+/* Эконом — не «плохой» вариант, а более дешёвый: нейтральный графит без красного */
+.media-badge--econom { background: rgba(35, 39, 43, 0.86); }
+.media-badge--ours { background: var(--green-500); }
 
 .media-dot { width: 8px; height: 8px; border-radius: 50%; }
-.media-badge--bad .media-dot { background: var(--bad-600); }
-.media-badge--good .media-dot { background: #FFFFFF; }
+.media-badge--econom .media-dot { background: var(--ink-300); }
+.media-badge--ours .media-dot { background: #FFFFFF; }
 
 .compare-body {
   display: flex;
@@ -354,7 +355,7 @@ a:hover { color: var(--green-600); text-decoration: underline; }
   font-weight: 700;
   line-height: 1;
 }
-.mark-icon--bad { background: var(--paper-1); color: var(--bad-600); font-size: 14px; }
+.mark-icon--econom { background: var(--paper-1); color: var(--ink-500); font-size: 15px; }
 .mark-icon--good { background: var(--green-050); color: var(--green-700); font-size: 13px; }
 
 /* ------------------------------------------------------------
@@ -669,6 +670,7 @@ a:hover { color: var(--green-600); text-decoration: underline; }
   .split { gap: 40px 48px; }
   .video-head { align-items: flex-start; }
   .mosaic { min-height: 440px; }
+  .tab { padding: 12px 18px; }
   .phone { display: inline-flex; align-items: center; min-height: 44px; }
 }
 
