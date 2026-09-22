@@ -172,7 +172,36 @@
   });
 
   /* --------------------------------------------------------
-     3. Форма заявки
+     3. Сквозная кнопка на мобильном
+     Показываем, когда первый экран ушёл вверх, и убираем,
+     когда человек долистал до формы — иначе панель её накрывает.
+     -------------------------------------------------------- */
+
+  var sticky = document.getElementById('sticky-cta');
+  var hero = document.querySelector('.hero');
+  var zayavka = document.getElementById('zayavka');
+
+  if (sticky && hero && zayavka && 'IntersectionObserver' in window) {
+    var heroGone = false;
+    var formSeen = false;
+
+    var applyStickyState = function () {
+      sticky.hidden = !(heroGone && !formSeen);
+    };
+
+    new IntersectionObserver(function (entries) {
+      heroGone = !entries[0].isIntersecting;
+      applyStickyState();
+    }, { rootMargin: '-80px 0px 0px 0px' }).observe(hero);
+
+    new IntersectionObserver(function (entries) {
+      formSeen = entries[0].isIntersecting;
+      applyStickyState();
+    }).observe(zayavka);
+  }
+
+  /* --------------------------------------------------------
+     4. Форма заявки
      -------------------------------------------------------- */
 
   // Куда уводим человека после успешной отправки

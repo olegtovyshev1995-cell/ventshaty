@@ -1022,6 +1022,36 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
 }
 
 /* ------------------------------------------------------------
+   Сквозная кнопка на мобильном
+   На широких экранах не нужна — там CTA и так на виду
+   ------------------------------------------------------------ */
+.sticky-cta { display: none; }
+
+@media (max-width: 640px) {
+  .sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.96);
+    border-top: 1px solid var(--line);
+    backdrop-filter: blur(8px);
+  }
+  .sticky-cta[hidden] { display: none; }
+  .sticky-cta .btn { padding: 14px 18px; font-size: 16px; }
+  .sticky-cta .btn--ghost { background: var(--paper-0); }
+
+  /* Место под панель резервируем всегда, а не в момент появления:
+     иначе страница дёргается и «убегает» из-под пальца */
+  body { padding-bottom: 84px; }
+}
+
+/* ------------------------------------------------------------
    Заглушки под фото, которых ещё нет
    ------------------------------------------------------------ */
 .img-placeholder {
