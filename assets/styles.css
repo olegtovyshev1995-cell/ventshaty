@@ -227,6 +227,7 @@ a:hover { color: var(--green-600); text-decoration: underline; }
   font-size: var(--text-base);
   font-weight: 700;
   text-decoration: none;
+  text-align: center;
   cursor: pointer;
   transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
 }
@@ -1047,8 +1048,9 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
   .sticky-cta .btn--ghost { background: var(--paper-0); }
 
   /* Место под панель резервируем всегда, а не в момент появления:
-     иначе страница дёргается и «убегает» из-под пальца */
-  body { padding-bottom: 84px; }
+     иначе страница дёргается и «убегает» из-под пальца. Резерв отдаём
+     футеру, а не body — иначе под тёмным футером видна белая полоса */
+  .footer { padding-bottom: calc(28px + 84px); }
 }
 
 /* ------------------------------------------------------------
@@ -1113,6 +1115,15 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
   color: var(--ink-500);
   font-size: 15px;
 }
+
+/* Настоящее превью поверх тёмной заглушки: если картинка не загрузится,
+   onerror её убирает и остаётся заглушка */
+.video-media > img { position: absolute; inset: 0; }
+
+/* Карточка «все ролики» рядом с видео */
+.video-more .video-body { height: 100%; justify-content: center; gap: 14px; padding: 28px; }
+.btn--on-dark { color: #FFFFFF; border-color: var(--graphite-600); }
+.btn--on-dark:hover { color: #FFFFFF; border-color: var(--ink-300); }
 
 @media (max-width: 640px) {
   .symptoms { gap: 12px; }

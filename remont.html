@@ -103,38 +103,27 @@
 
     <div class="video-grid">
 
-      <article class="video-card" data-video data-video-url="">
+      <!-- Ролик канала ВЕНТШАХТЫ.РФ на Rutube (автор подтверждён).
+           Превью берём у Rutube; если не загрузится — остаётся тёмная заглушка. -->
+      <article class="video-card" data-video data-video-url="https://rutube.ru/play/embed/b97c45428732d9e93f0f1792b519d96e">
         <div class="video-media">
-          <!-- TODO: превью в assets/img/remont-video-1.jpg + ссылка в data-video-url -->
-          <div class="img-placeholder img-placeholder--dark" data-placeholder="Видео: проверка тяги на объекте"></div>
+          <div class="img-placeholder img-placeholder--dark" data-placeholder=""></div>
+          <img src="https://rutube.ru/api/video/b97c45428732d9e93f0f1792b519d96e/thumbnail/?redirect=1" alt="Две вентшахты на кирпичном доме — кадр из видео" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">
           <span class="video-play" aria-hidden="true"><span class="video-play-tri"></span></span>
         </div>
         <div class="video-body">
-          <h3 class="h4 h4--on-dark">Диагностика: как проверяем тягу</h3>
+          <h3 class="h4 h4--on-dark">Две вентшахты на кирпичном доме и примыкание к черепице</h3>
         </div>
       </article>
 
-      <article class="video-card" data-video data-video-url="">
-        <div class="video-media">
-          <!-- TODO: превью в assets/img/remont-video-2.jpg + ссылка в data-video-url -->
-          <div class="img-placeholder img-placeholder--dark" data-placeholder="Видео: ремонт примыкания к кровле"></div>
-          <span class="video-play" aria-hidden="true"><span class="video-play-tri"></span></span>
-        </div>
+      <aside class="video-card video-more">
         <div class="video-body">
-          <h3 class="h4 h4--on-dark">Переделка примыкания на кровле</h3>
+          <h3 class="h4 h4--on-dark">Все ролики с наших объектов</h3>
+          <p class="video-text">Монтаж шахт, примыкания к кровле, разбор ошибок — снимаем сами.</p>
+          <a class="btn btn--primary" href="https://rutube.ru/channel/52346920/" target="_blank" rel="noopener">Смотреть на Rutube</a>
+          <a class="btn btn--ghost btn--on-dark" href="https://www.youtube.com/@ventshahty/videos" target="_blank" rel="noopener">Канал на YouTube</a>
         </div>
-      </article>
-
-      <article class="video-card" data-video data-video-url="">
-        <div class="video-media">
-          <!-- TODO: превью в assets/img/remont-video-3.jpg + ссылка в data-video-url -->
-          <div class="img-placeholder img-placeholder--dark" data-placeholder="Видео: узел до и после"></div>
-          <span class="video-play" aria-hidden="true"><span class="video-play-tri"></span></span>
-        </div>
-        <div class="video-body">
-          <h3 class="h4 h4--on-dark">Узел до и после ремонта</h3>
-        </div>
-      </article>
+      </aside>
 
     </div>
   </div>
