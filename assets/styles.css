@@ -316,7 +316,7 @@ a:hover { color: var(--green-600); text-decoration: underline; }
   left: 12px;
   padding: 6px 12px;
   border-radius: var(--radius-pill);
-  font-size: 12px;
+  font-size: var(--text-caption);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -375,15 +375,16 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
 
 .field-check {
   display: grid;
-  grid-template-columns: 20px 1fr;
+  grid-template-columns: 24px 1fr;
   gap: 12px;
-  align-items: start;
+  align-items: center;
+  min-height: 44px;
   font-size: var(--text-small);
   line-height: 1.45;
   color: var(--ink-500);
   cursor: pointer;
 }
-.field-check input { width: 20px; height: 20px; margin: 0; accent-color: var(--green-500); cursor: pointer; }
+.field-check input { width: 24px; height: 24px; margin: 0; accent-color: var(--green-500); cursor: pointer; }
 
 .form-done {
   margin: 0;
@@ -1206,7 +1207,7 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
 
   .compare { gap: 16px; }
   .compare-body { padding: 20px 18px 24px; gap: 14px; }
-  .media-badge { top: 10px; left: 10px; padding: 7px 12px; font-size: 12px; }
+  .media-badge { top: 10px; left: 10px; padding: 7px 12px; }
 
   .cta-bar { margin-top: 24px; padding: 20px 18px 22px; gap: 16px; }
   .cta-bar-text { flex: 1 1 100%; }
@@ -1271,6 +1272,61 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
   .section--faq { padding-left: 14px; padding-right: 14px; }
   .tabs { margin-left: -14px; margin-right: -14px; padding-left: 14px; padding-right: 14px; }
   .founder-photo { max-width: 100%; }
+
+}
+
+/* На очень узких экранах вроде сложенного Fold заголовок занимает
+   слишком много строк и выталкивает кнопку за первый экран.
+   Порог 340 px, чтобы не задеть iPhone SE (375 px) */
+@media (max-width: 340px) {
+  .hero { padding-top: 28px; }
+  .h1 { font-size: 28px; line-height: 1.1; }
+  .hero-text { gap: 14px; }
+  .hero-facts { display: none; }
+}
+
+/* ------------------------------------------------------------
+   Сенсорные устройства любой ширины
+   Планшет в ландшафте — это 1024 px, но палец там тот же:
+   размер тач-целей привязываем к типу ввода, а не к ширине
+   ------------------------------------------------------------ */
+@media (pointer: coarse) {
+  .phone,
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .tab { padding: 12px 18px; }
+  .faq-summary { padding-block: 20px; }
+}
+
+/* ------------------------------------------------------------
+   Ландшафт на низком экране (телефон боком, ~390 px высоты)
+   Места по вертикали мало, по горизонтали много — возвращаем
+   две колонки и поджимаем вертикальные отступы
+   ------------------------------------------------------------ */
+@media (orientation: landscape) and (max-height: 520px) {
+  .hero { padding: 14px 24px 32px; }
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: 20px 28px;
+    align-items: center;
+  }
+  /* колонка уже — кнопки уезжают в два ряда и съедают весь экран */
+  .hero-actions .btn { padding: 12px 18px; font-size: 16px; }
+  .hero-text { gap: 10px; }
+  .hero-actions { margin-top: 0; }
+  .hero-facts { display: none; }
+  .h1 { font-size: clamp(22px, 2.9vw, 32px); line-height: 1.08; }
+  .lead { font-size: 16px; line-height: 1.45; }
+  .eyebrow-pill { padding: 5px 12px; }
+  .hero-media { padding-bottom: 28px; }
+  .hero-shot--econom { width: 40%; border-width: 5px; }
+
+  .section { padding-block: 48px 56px; }
+  .block-head--narrow { margin-bottom: 24px; }
+  .video-wrap { gap: 28px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
