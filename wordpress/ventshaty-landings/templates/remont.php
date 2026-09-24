@@ -178,7 +178,7 @@ $vsh_u = esc_url( VSH_URL );
 
 <!-- ============================================================
      4. Цены
-     ЗАГЛУШКИ: суммы и платность диагностики.
+     ЗАГЛУШКА: платность диагностики.
      ============================================================ -->
 <section class="section section--tint" id="cena">
   <div class="container split split--start">
@@ -192,19 +192,19 @@ $vsh_u = esc_url( VSH_URL );
       <div class="price-list">
         <div class="price-row">
           <div class="price-row-text"><h3 class="h4">Утепление, конденсат</h3></div>
-          <p class="price-value">[ЗАГЛУШКА]</p>
+          <p class="price-value">от 83&nbsp;000&nbsp;₽</p>
         </div>
         <div class="price-row">
           <div class="price-row-text"><h3 class="h4">Наращивание высоты, сечение</h3></div>
-          <p class="price-value">[ЗАГЛУШКА]</p>
+          <p class="price-value">от 102&nbsp;000&nbsp;₽</p>
         </div>
         <div class="price-row">
           <div class="price-row-text"><h3 class="h4">Ремонт примыкания к кровле</h3></div>
-          <p class="price-value">[ЗАГЛУШКА]</p>
+          <p class="price-value">от 110&nbsp;000&nbsp;₽</p>
         </div>
         <div class="price-row">
           <div class="price-row-text"><h3 class="h4">Переборка самодельного узла</h3></div>
-          <p class="price-value">[ЗАГЛУШКА]</p>
+          <p class="price-value">от 120&nbsp;000&nbsp;₽</p>
         </div>
       </div>
 
@@ -419,7 +419,7 @@ $vsh_u = esc_url( VSH_URL );
       <details class="faq-item">
         <summary class="faq-summary"><span>Сколько стоит?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
         <!-- ЗАГЛУШКА -->
-        <div class="faq-answer">Диагностика: [ЗАГЛУШКА]. Цену ремонта называем после выезда и фиксируем в договоре.</div>
+        <div class="faq-answer">Ремонт — от 83&nbsp;000&nbsp;₽, точную цену называем после выезда и фиксируем в договоре. Диагностика: [ЗАГЛУШКА].</div>
       </details>
     </div>
   </div>
