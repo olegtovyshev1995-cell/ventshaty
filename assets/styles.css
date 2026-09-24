@@ -1279,3 +1279,6 @@ select.field-input { appearance: none; cursor: pointer; padding-right: 40px; bac
     animation-duration: 1ms !important;
   }
 }
+
+/* Поле-ловушка для ботов в форме заявки: прячем от людей и скринридеров */
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }

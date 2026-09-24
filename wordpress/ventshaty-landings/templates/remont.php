@@ -1,16 +1,20 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php
+/**
+ * Шаблон собран wordpress/build.py из remont.html — не правьте вручную,
+ * меняйте HTML в корне репозитория и пересоберите плагин.
+ */
+defined( 'ABSPATH' ) || exit;
+$vsh_u = esc_url( VSH_URL );
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="utf-8">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ремонт вентиляции в частном доме — вентшахты.рф</title>
-<meta name="description" content="Ремонт вентиляции в частном доме: устраняем обратную тягу, конденсат, наледь и протечки на кровле. Инженерная диагностика, свои детали, гарантия по договору.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css">
+<?php vsh_head_meta( 'Ремонт вентиляции в частном доме — вентшахты.рф', 'Ремонт вентиляции в частном доме: устраняем обратную тягу, конденсат, наледь и протечки на кровле. Инженерная диагностика, свои детали, гарантия по договору.' ); ?>
+<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class( 'vsh-landing' ); ?>>
+<?php wp_body_open(); ?>
 
 <!-- ============================================================
      0. Первый экран — фото сразу, текст минимальный
@@ -38,15 +42,15 @@
     <div class="hero-media">
       <figure class="hero-shot hero-shot--ours">
         <picture>
-          <source type="image/jpeg" srcset="assets/img/gas-ours-640.jpg 640w, assets/img/gas-ours-960.jpg 960w, assets/img/gas-ours-1440.jpg 1440w" sizes="(max-width: 900px) 100vw, 520px">
-          <img src="assets/img/gas-ours-960.jpg" width="1440" height="1080" fetchpriority="high" decoding="async" alt="Вентшахта по расчёту, с утеплением и дымником на кровле">
+          <source type="image/jpeg" srcset="<?php echo $vsh_u; ?>assets/img/gas-ours-640.jpg 640w, <?php echo $vsh_u; ?>assets/img/gas-ours-960.jpg 960w, <?php echo $vsh_u; ?>assets/img/gas-ours-1440.jpg 1440w" sizes="(max-width: 900px) 100vw, 520px">
+          <img src="<?php echo $vsh_u; ?>assets/img/gas-ours-960.jpg" width="1440" height="1080" fetchpriority="high" decoding="async" alt="Вентшахта по расчёту, с утеплением и дымником на кровле">
         </picture>
         <figcaption class="shot-label shot-label--ours">Как должно быть</figcaption>
       </figure>
       <figure class="hero-shot hero-shot--econom">
         <picture>
-          <source type="image/jpeg" srcset="assets/img/gas-usual-640.jpg 640w, assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 900px) 40vw, 240px">
-          <img src="assets/img/gas-usual-640.jpg" width="1080" height="810" decoding="async" alt="Неутеплённая труба без расчёта — частая причина проблем">
+          <source type="image/jpeg" srcset="<?php echo $vsh_u; ?>assets/img/gas-usual-640.jpg 640w, <?php echo $vsh_u; ?>assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 900px) 40vw, 240px">
+          <img src="<?php echo $vsh_u; ?>assets/img/gas-usual-640.jpg" width="1080" height="810" decoding="async" alt="Неутеплённая труба без расчёта — частая причина проблем">
         </picture>
         <figcaption class="shot-label shot-label--econom">Проблема</figcaption>
       </figure>
@@ -276,7 +280,7 @@
         <li class="mark"><span class="mark-icon mark-icon--dot" aria-hidden="true">–</span><span>Каналы сведены неправильно</span></li>
         <li class="mark"><span class="mark-icon mark-icon--dot" aria-hidden="true">–</span><span>Металл прогнил — латать нечего</span></li>
       </ul>
-      <a class="btn btn--ghost btn--wide" href="index.html">Монтаж шахты под ключ</a>
+      <a class="btn btn--ghost btn--wide" href="<?php echo esc_url( vsh_opt( 'montazh_url' ) ); ?>">Монтаж шахты под ключ</a>
     </div>
 
   </div>
@@ -297,15 +301,15 @@
     <div class="gallery">
       <figure class="gallery-cell">
         <picture>
-          <source type="image/jpeg" srcset="assets/img/gas-ours-640.jpg 640w, assets/img/gas-ours-960.jpg 960w" sizes="(max-width: 860px) 100vw, 400px">
-          <img src="assets/img/gas-ours-640.jpg" width="1440" height="1080" loading="lazy" decoding="async" alt="Вентшахта по расчёту на кровле">
+          <source type="image/jpeg" srcset="<?php echo $vsh_u; ?>assets/img/gas-ours-640.jpg 640w, <?php echo $vsh_u; ?>assets/img/gas-ours-960.jpg 960w" sizes="(max-width: 860px) 100vw, 400px">
+          <img src="<?php echo $vsh_u; ?>assets/img/gas-ours-640.jpg" width="1440" height="1080" loading="lazy" decoding="async" alt="Вентшахта по расчёту на кровле">
         </picture>
         <figcaption class="gallery-caption">Шахта по расчёту, с утеплением</figcaption>
       </figure>
       <figure class="gallery-cell">
         <picture>
-          <source type="image/jpeg" srcset="assets/img/gas-usual-640.jpg 640w, assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 860px) 100vw, 400px">
-          <img src="assets/img/gas-usual-640.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Неутеплённая труба — типичная проблема">
+          <source type="image/jpeg" srcset="<?php echo $vsh_u; ?>assets/img/gas-usual-640.jpg 640w, <?php echo $vsh_u; ?>assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 860px) 100vw, 400px">
+          <img src="<?php echo $vsh_u; ?>assets/img/gas-usual-640.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Неутеплённая труба — типичная проблема">
         </picture>
         <figcaption class="gallery-caption">Проблемный узел без утепления</figcaption>
       </figure>
@@ -512,7 +516,7 @@
       <a class="footer-link" href="#simptomy">С чем приходят</a>
       <a class="footer-link" href="#video">Видео</a>
       <a class="footer-link" href="#cena">Цены</a>
-      <a class="footer-link" href="index.html">Монтаж под ключ</a>
+      <a class="footer-link" href="<?php echo esc_url( vsh_opt( 'montazh_url' ) ); ?>">Монтаж под ключ</a>
     </div>
 
   </div>
@@ -529,6 +533,6 @@
   <a class="btn btn--primary" href="#zayavka">На диагностику</a>
 </div>
 
-<script src="assets/main.js" defer></script>
+<?php wp_footer(); ?>
 </body>
 </html>

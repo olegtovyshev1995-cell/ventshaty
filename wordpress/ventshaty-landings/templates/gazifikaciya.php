@@ -1,16 +1,20 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php
+/**
+ * Шаблон собран wordpress/build.py из index.html — не правьте вручную,
+ * меняйте HTML в корне репозитория и пересоберите плагин.
+ */
+defined( 'ABSPATH' ) || exit;
+$vsh_u = esc_url( VSH_URL );
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="utf-8">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Вентиляция для газового котла — вентшахты.рф</title>
-<meta name="description" content="Вентшахта для газового котла: инженерный проект по СП 402.1325800.2018 и требованиям Мособлгаза, монтаж и герметичное примыкание к кровле с гарантией 2 года.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap">
-<link rel="stylesheet" href="assets/styles.css">
+<?php vsh_head_meta( 'Вентиляция для газового котла — вентшахты.рф', 'Вентшахта для газового котла: инженерный проект по СП 402.1325800.2018 и требованиям Мособлгаза, монтаж и герметичное примыкание к кровле с гарантией 2 года.' ); ?>
+<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class( 'vsh-landing' ); ?>>
+<?php wp_body_open(); ?>
 
 <!-- ============================================================
      0. Первый экран
@@ -42,15 +46,15 @@
     <div class="hero-media">
       <figure class="hero-shot hero-shot--ours">
         <picture>
-          <source type="image/jpeg" srcset="assets/img/gas-ours-640.jpg 640w, assets/img/gas-ours-960.jpg 960w, assets/img/gas-ours-1440.jpg 1440w" sizes="(max-width: 900px) 100vw, 520px">
-          <img src="assets/img/gas-ours-960.jpg" width="1440" height="1080" fetchpriority="high" decoding="async" alt="Вентшахта в фальцевой обшивке с дымником на кровле кирпичного дома">
+          <source type="image/jpeg" srcset="<?php echo $vsh_u; ?>assets/img/gas-ours-640.jpg 640w, <?php echo $vsh_u; ?>assets/img/gas-ours-960.jpg 960w, <?php echo $vsh_u; ?>assets/img/gas-ours-1440.jpg 1440w" sizes="(max-width: 900px) 100vw, 520px">
+          <img src="<?php echo $vsh_u; ?>assets/img/gas-ours-960.jpg" width="1440" height="1080" fetchpriority="high" decoding="async" alt="Вентшахта в фальцевой обшивке с дымником на кровле кирпичного дома">
         </picture>
         <figcaption class="shot-label shot-label--ours">Наш вариант</figcaption>
       </figure>
       <figure class="hero-shot hero-shot--econom">
         <picture>
-          <source type="image/jpeg" srcset="assets/img/gas-usual-640.jpg 640w, assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 900px) 40vw, 240px">
-          <img src="assets/img/gas-usual-640.jpg" width="1080" height="810" decoding="async" alt="Неутеплённая сэндвич-труба на фасаде деревянного дома">
+          <source type="image/jpeg" srcset="<?php echo $vsh_u; ?>assets/img/gas-usual-640.jpg 640w, <?php echo $vsh_u; ?>assets/img/gas-usual-960.jpg 960w" sizes="(max-width: 900px) 40vw, 240px">
+          <img src="<?php echo $vsh_u; ?>assets/img/gas-usual-640.jpg" width="1080" height="810" decoding="async" alt="Неутеплённая сэндвич-труба на фасаде деревянного дома">
         </picture>
         <figcaption class="shot-label shot-label--econom">Эконом-вариант</figcaption>
       </figure>
@@ -83,8 +87,8 @@
       <article class="compare-card">
         <div class="compare-media" data-media="usual">
           <picture>
-            <source type="image/jpeg" srcset="assets/img/gas-usual-640.jpg 640w, assets/img/gas-usual-960.jpg 960w, assets/img/gas-usual-1080.jpg 1080w" sizes="(max-width: 860px) 100vw, 600px">
-            <img src="assets/img/gas-usual-960.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Неутеплённая сэндвич-труба на фасаде деревянного дома">
+            <source type="image/jpeg" srcset="<?php echo $vsh_u; ?>assets/img/gas-usual-640.jpg 640w, <?php echo $vsh_u; ?>assets/img/gas-usual-960.jpg 960w, <?php echo $vsh_u; ?>assets/img/gas-usual-1080.jpg 1080w" sizes="(max-width: 860px) 100vw, 600px">
+            <img src="<?php echo $vsh_u; ?>assets/img/gas-usual-960.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Неутеплённая сэндвич-труба на фасаде деревянного дома">
           </picture>
           <span class="media-badge media-badge--econom"><span class="media-dot"></span>Эконом-вариант</span>
         </div>
@@ -102,8 +106,8 @@
       <article class="compare-card compare-card--ours">
         <div class="compare-media" data-media="ours">
           <picture>
-            <source type="image/jpeg" srcset="assets/img/gas-ours-640.jpg 640w, assets/img/gas-ours-960.jpg 960w, assets/img/gas-ours-1440.jpg 1440w" sizes="(max-width: 860px) 100vw, 600px">
-            <img src="assets/img/gas-ours-960.jpg" width="1440" height="1080" loading="lazy" decoding="async" alt="Вентшахта в фальцевой обшивке с дымником на кровле кирпичного дома">
+            <source type="image/jpeg" srcset="<?php echo $vsh_u; ?>assets/img/gas-ours-640.jpg 640w, <?php echo $vsh_u; ?>assets/img/gas-ours-960.jpg 960w, <?php echo $vsh_u; ?>assets/img/gas-ours-1440.jpg 1440w" sizes="(max-width: 860px) 100vw, 600px">
+            <img src="<?php echo $vsh_u; ?>assets/img/gas-ours-960.jpg" width="1440" height="1080" loading="lazy" decoding="async" alt="Вентшахта в фальцевой обшивке с дымником на кровле кирпичного дома">
           </picture>
           <span class="media-badge media-badge--ours"><span class="media-dot"></span>Наш вариант</span>
         </div>
@@ -756,6 +760,6 @@
   <a class="btn btn--primary" href="#zayavka">Оставить заявку</a>
 </div>
 
-<script src="assets/main.js" defer></script>
+<?php wp_footer(); ?>
 </body>
 </html>

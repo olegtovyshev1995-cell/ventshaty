@@ -206,26 +206,29 @@
      4. Форма заявки
      -------------------------------------------------------- */
 
+  // На WordPress плагин «Вентшахты: лендинги» кладёт сюда адрес обработчика
+  // и страницу «спасибо» из своих настроек (window.VSH_LEAD)
+  var WP = window.VSH_LEAD || null;
+
   // Куда уводим человека после успешной отправки
-  var THANK_YOU_URL = 'https://вентшахты.рф/thankyou_page.php';
+  var THANK_YOU_URL = (WP && WP.thankYouUrl) || 'https://вентшахты.рф/thankyou_page.php';
 
   /**
-   * TODO: подключить отправку заявки.
-   * Сейчас функция ничего не отправляет — форма проверяет поля и сразу
-   * уводит на страницу «спасибо», то есть заявка никуда не приходит.
-   * Подставьте сюда запрос в CRM или на почтовый обработчик, например:
-   *
-   *   return fetch('/api/lead', {
-   *     method: 'POST',
-   *     headers: { 'Content-Type': 'application/json' },
-   *     body: JSON.stringify(lead)
-   *   }).then(function (r) {
-   *     if (!r.ok) throw new Error('lead: ' + r.status);
-   *   });
-   *
-   * Редирект произойдёт только после того, как промис здесь выполнится.
+   * Отправка заявки.
+   * На WordPress — POST в admin-ajax (action=vsh_lead), плагин шлёт письмо.
+   * На статичной версии (GitHub Pages) обработчика нет: заявка никуда не
+   * уходит, форма только проверяет поля и уводит на страницу «спасибо».
+   * Редирект происходит только после того, как промис здесь выполнится.
    */
   var sendLead = function (lead) {
+    if (WP && WP.ajaxUrl && window.fetch && window.FormData) {
+      var body = new FormData();
+      body.append('action', 'vsh_lead');
+      Object.keys(lead).forEach(function (key) { body.append(key, lead[key]); });
+      return fetch(WP.ajaxUrl, { method: 'POST', body: body, credentials: 'same-origin' })
+        .then(function (r) { return r.json(); })
+        .then(function (res) { if (!res || !res.success) throw new Error('lead'); });
+    }
     if (window.console) console.info('Заявка (отправка не подключена):', lead);
     return Promise.resolve();
   };
@@ -276,7 +279,10 @@
         name: form.elements.name.value.trim(),
         phone: phone.value.trim(),
         stage: form.elements.stage.value,
-        page: location.pathname
+        // Скрытое поле-ловушка: человек его не видит, бот заполняет
+        website: form.elements.website ? form.elements.website.value : '',
+        page: location.href,
+        title: document.title
       }).then(function () {
         // Подтверждение на случай, если переход не сработает
         done.hidden = false;
